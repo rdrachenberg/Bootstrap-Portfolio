@@ -43,6 +43,7 @@ h1 {
   font-size: 30px;
   line-height: 49px;
   border-bottom: 3px solid #ddd;
+  color: black;
 }
 
 h2,
@@ -131,6 +132,7 @@ h3,
   margin-bottom: 15px;
   line-height: 22px;
   border-bottom: 2px solid #eee;
+  color: black;
 }
 
 .social {
@@ -158,6 +160,7 @@ h3,
   margin: 0 0 40px;
   background: #fff;
   border: 1px solid #ddd;
+  color: black;
 }
 
 /* portfolio page */
@@ -190,7 +193,7 @@ h3,
   line-height: 30px;
   color: #fff;
   text-align: center;
-  background: #4aaaa5;
+  background: black;
   border-bottom: 0;
 }
 
@@ -242,67 +245,6 @@ input[type=submit] {
   border: 0 none;
 }
 
-/* @media only screen and (min-width: 768px) {
-    /* tablets and desktop 
-}
-
-@media only screen and (max-width: 767px) {
-    /* phones 
-  .main-container {
-    width: 100%;
-    max-width: 100%
-    margin: 0 auto;
-  }
-  #sidebar, #connect #div {
-  width: 100%;
-  float: left;
-  margin: auto 0;
-  }
-}
-
-@media only screen and (max-width: 767px) and (orientation: portrait) {
-    /* portrait phones 
-  .main-container {
-    width: 100%;
-    max-width: 100%
-    margin: 0 auto;
-  }
-  #sidebar, #connect #div {
-  width: 100%;
-  float: left;
-  margin: auto 0;
-  }
-}
-
-/* SMARTPHONES PORTRAIT 
-@media only screen and (min-width: 300px) {
- .main-container {
-    width: 100%;
-    max-width: 100%
-    margin: 0 auto;
-  }
-  #sidebar, #connect, #div {
-  width: 100%;
-  float: left;
-  margin: auto 0;
-  }
-}
-
-
-/* SMARTPHONES LANDSCAPE
-@media only screen and (min-width: 480px) {
-  .main-container {
-    width: 100%;
-    max-width: 100%
-    margin: 0 auto;
-  }
-  #sidebar, #connect, #div {
-  width: 100%;
-  float: left;
-  margin: auto 0;
-  }
-}
-*/
 @media only screen and (max-width: 992px) {
   
   .main-container {
@@ -367,6 +309,69 @@ input[type=submit] {
     background: black;
   }
 
+
+
+/* @media only screen and (min-width: 768px) {
+    /* tablets and desktop 
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones 
+  .main-container {
+    width: 100%;
+    max-width: 100%
+    margin: 0 auto;
+  }
+  #sidebar, #connect #div {
+  width: 100%;
+  float: left;
+  margin: auto 0;
+  }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones 
+  .main-container {
+    width: 100%;
+    max-width: 100%
+    margin: 0 auto;
+  }
+  #sidebar, #connect #div {
+  width: 100%;
+  float: left;
+  margin: auto 0;
+  }
+}
+
+/* SMARTPHONES PORTRAIT 
+@media only screen and (min-width: 300px) {
+ .main-container {
+    width: 100%;
+    max-width: 100%
+    margin: 0 auto;
+  }
+  #sidebar, #connect, #div {
+  width: 100%;
+  float: left;
+  margin: auto 0;
+  }
+}
+
+
+/* SMARTPHONES LANDSCAPE
+@media only screen and (min-width: 480px) {
+  .main-container {
+    width: 100%;
+    max-width: 100%
+    margin: 0 auto;
+  }
+  #sidebar, #connect, #div {
+  width: 100%;
+  float: left;
+  margin: auto 0;
+  }
+}
+*/
   /*
   #textarea {
   height: 100px;
