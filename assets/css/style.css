@@ -250,6 +250,21 @@ input[type=submit] {
   .main-container {
     width: 100%;
   }
+
+  #main-container {
+  padding-top: 130px;
+}
+
+.main-section {
+  float: left;
+  width: 100%;
+  max-width: 650px;
+  padding: 30px;
+  margin: 0 0 40px;
+  background: #fff;
+  border: 1px solid #ddd;
+  color: black;
+}
   .sidebar {
     float: left;
     margin: 0 auto;
