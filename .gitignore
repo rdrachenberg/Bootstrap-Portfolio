@@ -1,0 +1,6 @@
+portfolio.code-workspace
+.DS_Store
+node_modules 
+config/config.json
+process.env
+.env
