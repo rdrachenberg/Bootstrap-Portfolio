@@ -52,7 +52,7 @@ h3 {
 }
 
 /* header */
-
+/* 
 #masthead {
   position: fixed;
   z-index: 99;
@@ -62,7 +62,7 @@ h3 {
   color: #fff;
   background: #fff;
   border-bottom: 2px solid #ccc;
-}
+} */
 
 #logo {
   float: left;
@@ -116,10 +116,31 @@ footer {
   color: #fff;
   color: #ccc;
   text-align: center;
-  background: black;
+  background: #3E3F3B;
   border-top: 8px solid grey;
 }
+/* sticky footer styling */
 
+/* http://ryanfait.com/html5-sticky-footer/ */
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  height: auto !important;
+  height: 100%;
+  min-height: 100%;
+  margin: 0 auto -105px;
+}
+
+footer,
+.push {
+  height: 105px;
+}
+
+/* end sticky footer styling */
 /* sidebar */
 
 .sidebar {
@@ -175,16 +196,16 @@ h3,
    float: left;
    overflow: auto;
 }
-.card-header {
+/* .card-header {
   background-color: black;
   
-}
-
+} */
+/* 
 .friendFinder {
  position: relative;
  float: left;
  overflow: auto;
-}
+} */
 /* portfolio page */
 
 .work {
@@ -340,14 +361,14 @@ input[type=submit] {
   }
 
   
-  #masthead {
+  /* #masthead {
     position: relative;
     top: 0;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
     margin-bottom: 0px;
-  }
+  } */
   
   #logo { 
     position: relative;
@@ -363,3 +384,4 @@ input[type=submit] {
     text-decoration: none;
     background: black;
   }
+}
