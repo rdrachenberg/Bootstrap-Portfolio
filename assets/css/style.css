@@ -361,7 +361,8 @@ input[type=submit] {
 }
 
 .main-section {
-  margin-bottom: 15px;
+   margin-bottom: 15px;
+   padding: 5px;
 }
 
 nav {
@@ -398,6 +399,8 @@ nav {
   margin: 25px 25px 25px;
   margin-right: 50px;
   margin-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   overflow: auto;
 }
 
@@ -429,7 +432,8 @@ nav {
   }
   
   .main-section {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    padding: 20px;
   }
 
   nav {
@@ -461,16 +465,16 @@ nav {
   .work {
     position: relative;
     align-content: center;
-    width: 375px;
+    width: 295px;
     margin: 25px 25px 25px;
-    margin-right: 50px;
-    margin-left: 50px;
+    margin-right: 30px;
+    margin-left: 30px;
     margin-bottom: -5px;
     overflow: auto;
   }
 
   .work:nth-child(even) {
-    margin-right: 50px;
-    margin-left: 50px;
+    margin-right: 30px;
+    margin-left: 30px;
   }
 }
