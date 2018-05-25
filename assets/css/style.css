@@ -179,21 +179,18 @@ h3,
 
 .linkColor {
   background-image: url('../images/burger.gif');
-   position: relative;
-   float: left;
-   overflow: auto;
+  position: relative;
+  float: left;
+  overflow: auto;
 }
 
 .work {
   position: relative;
   float: right;
   width: 274px;
-  margin: 20px 0 25px;
+  margin: 10px 0 10px;
+  margin-right: 19px;
   overflow: auto;
-}
-
-.work:nth-child(even) {
-  margin-right: 40px;
 }
 
 .work img {
