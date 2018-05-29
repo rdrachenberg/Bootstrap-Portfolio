@@ -24,6 +24,8 @@ h2,
 h3,
 p {
   margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14pt;
 }
 
 p:last-child {
