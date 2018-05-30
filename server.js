@@ -15,9 +15,12 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/rd-portfolio-db
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, "client/build")));
 
+app.use(express.static(path.join(__dirname, "client/build")));
+// Use body-parser for handling form submissions
 app.use(bodyParser.urlencoded({extended: true}));
+// Use express.static to serve the public folder as a static directory
+app.use(express.static("public"));
 
 app.use(bodyParser.json());
 
@@ -44,14 +47,26 @@ db.User.create({
 });
 // Handle the post for this route
 app.post("/api/user", function (req, res, next) {
-    db.Note.create(req.body)
-    .then(function (dbNote) {
-    // If a Note was created successfully, find one User (there's only one) and push the new Note's _id to the User's `notes` array
+    db.User.create(req.body)
+
+    .then(function (dbUser) {
+    // If the User was updated successfully, send it back to the client
+        res.json(dbUser);
+    })
+    .catch(function (err) {
+    // If an error occurs, send it back to the client
+        res.json(err);
+    });
+});
+app.post("/api/message", function (req, res, next) {
+    db.Message.create(req.body)
+    .then(function (dbMessage) {
+    // If a Message was created successfully, find one User (there's only one) and push the new Message's _id to the User's `Messages` array
     // { new: true } tells the query that we want it to return the updated User -- it returns the original by default
     // Since our mongoose query returns a promise, we can chain another `.then` which receives the result of the query
         return db.User.findOneAndUpdate({}, {
             $push: {
-                notes: dbNote._id
+                Messages: dbMessage._id
             }
         }, {
             new: true
@@ -65,6 +80,32 @@ app.post("/api/user", function (req, res, next) {
     // If an error occurs, send it back to the client
         res.json(err);
     });
+});
+// Route for retrieving all Users from the db
+app.get("/user", function (req, res) {
+    // Find all Users
+    db.User.find({})
+        .then(function (dbUser) {
+            // If all Users are successfully found, send them back to the client
+            res.json(dbUser);
+        })
+        .catch(function (err) {
+            // If an error occurs, send the error back to the client
+            res.json(err);
+        });
+});
+// Route for retrieving all Notes from the db
+app.get("/message", function (req, res) {
+    // Find all Notes
+    db.Message.find({})
+        .then(function (dbMessage) {
+            // If all Notes are successfully found, send them back to the client
+            res.json(dbMessage);
+        })
+        .catch(function (err) {
+            // If an error occurs, send the error back to the client
+            res.json(err);
+        });
 });
 
 app.get("*", (req, res, next) => {
