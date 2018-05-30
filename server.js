@@ -18,7 +18,7 @@ mongoose.connect(`mongodb://heroku_brj5m93v:ad0meuap52vi25hnia7qju81ds@ds139970.
 // set up Express 
 app.use(express.static(path.join(__dirname, "client/build")));
 // Use body-parser for handling form submissions
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({extended: false}));
 // Use express.static to serve the public folder as a static directory
 app.use(express.static("public"));
 
