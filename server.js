@@ -8,14 +8,14 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
 const db = require("./models");
-
-// Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/rd-portfolio-db");
-// mongoose.connect(`mongodb://${config.db_user}:${config.db_pass}@ds117605.mlab.com:17605/test_db`);
-
+const databaseURI = ("mongodb://localhost/rd-portfolio-db");
 const app = express();
 
+// Connect to the Mongo DB
+mongoose.connect(process.env.MONGODB_URI || databaseURI);
+mongoose.connect(`mongodb://heroku_brj5m93v:ad0meuap52vi25hnia7qju81ds@ds139970.mlab.com:39970/heroku_brj5m93v`);
 
+// set up Express 
 app.use(express.static(path.join(__dirname, "client/build")));
 // Use body-parser for handling form submissions
 app.use(bodyParser.urlencoded({extended: true}));
