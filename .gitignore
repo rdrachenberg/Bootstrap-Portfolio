@@ -4,4 +4,3 @@ node_modules
 config/config.json
 process.env
 .env
-public
