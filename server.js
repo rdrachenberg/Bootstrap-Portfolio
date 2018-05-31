@@ -9,23 +9,47 @@ const session = require("express-session");
 const passport = require("passport");
 const db = require("./models");
 const databaseURI = ("mongodb://localhost/rd-portfolio-db");
+const mongodb = require('mongodb');
 const app = express();
+const logger = require("morgan");
+let uri = `mongodb://heroku_brj5m93v:ad0meuap52vi25hnia7qju81ds@ds139970.mlab.com:39970/heroku_brj5m93v`
+let db2 = mongoose.connection; 
+let cors = require('cors');
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || databaseURI);
 mongoose.connect(`mongodb://heroku_brj5m93v:ad0meuap52vi25hnia7qju81ds@ds139970.mlab.com:39970/heroku_brj5m93v`);
 
+if (process.env.MONGODB_URI) {
+    mongoose.connect(process.env.MONGODB_URI);
+} else {
+    mongoose.connect(databaseURI);
+}
+// Set up error log for mongoose error
+db2.on('error', function (err) {
+    console.log("MONGOOSE ERROR: ", err);
+});
+// Set up successful Mongoose Connnection log
+db2.once('open', function () {
+    console.log("Mongoose Connection Successful. ");
+});
+// Set up logger
+app.use(logger('dev'));
+
 // set up Express 
 app.use(express.static(path.join(__dirname, "client/build")));
-// Use body-parser for handling form submissions
-app.use(bodyParser.urlencoded({extended: true}));
-// Use express.static to serve the public folder as a static directory
-app.use(express.static("./public"));
 
+// Use body-parser for handling form submissions
+app.use(bodyParser.urlencoded({extended: false}));
+
+// Use express.static to serve the public folder as a static directory
+app.use(express.static('public'));
+
+//Set up Body Parser
 app.use(bodyParser.json());
 
-let cors = require('cors')
 
+// Set up CORS
 app.use(cors()) //
 app.use("/", api_routes);
 app.use(function (req, res, next) { res.header("Access-Control-Allow-Origin", "*");
