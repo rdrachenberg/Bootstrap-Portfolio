@@ -16,8 +16,7 @@
 - #### Passport
 - #### Bootswatch
 - #### Morgan
-- #### Heroku Deployment 
-### https://ryan-drac-port.herokuapp.com/
+- #### Heroku Deployment https://ryan-drac-port.herokuapp.com/
 
 
 <img src="https://media.giphy.com/media/3oKGzCvdJbyWsc5Nni/giphy.gif" width="450" height="160" />
