@@ -20,3 +20,5 @@
 
 
 <img src="https://media.giphy.com/media/3oKGzCvdJbyWsc5Nni/giphy.gif" width="450" height="160" />
+<br>
+<img src="./public/assets/images/console.gif" width="450" height="160" />
