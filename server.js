@@ -33,6 +33,10 @@ db2.on('error', function (err) {
 db2.once('open', function () {
     console.log("Mongoose Connection Successful. ");
 });
+// Initialize passport
+app.use(passport.initialize());
+// Start passport session
+app.use(passport.session());
 // Set up logger
 app.use(logger('dev'));
 
@@ -50,38 +54,25 @@ app.use(bodyParser.json());
 
 
 // Set up CORS
-app.use(cors()) //
-app.use("/", api_routes);
-app.use(function (req, res, next) { res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
+// app.use(cors()) //
+// app.use("/", api_routes);
+// app.use(function (req, res, next) { res.header("Access-Control-Allow-Origin", "*");
+//     res.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+// });
 // seed db
-db.User.create({
-    name: "Tester McFly",
-    email: "tester@gmail.com",
-    phone: "555-555-5555",
-    message: "This is a tester message"
-})
-.then(function (dbUser) {
-    console.log(dbUser);
-})
-.catch(function (err) {
-    console.log(err.message);
-});
-// Handle the post for this route
-app.post("/api/user", function (req, res, next) {
-    db.User.create(req.body)
-
-    .then(function (dbUser) {
-    // If the User was updated successfully, send it back to the client
-        res.json(dbUser);
-    })
-    .catch(function (err) {
-    // If an error occurs, send it back to the client
-        res.json(err);
-    });
-});
+// db.User.create({
+//     name: "Tester McFly",
+//     email: "tester@gmail.com",
+//     phone: "555-555-5555",
+//     message: "This is a tester message"
+// })
+// .then(function (dbUser) {
+//     console.log(dbUser);
+// })
+// .catch(function (err) {
+//     console.log(err.message);
+// });
 app.post("/api/message", function (req, res, next) {
     db.Message.create(req.body)
     .then(function (dbMessage) {
@@ -112,6 +103,7 @@ app.get("/user", function (req, res) {
         .then(function (dbUser) {
             // If all Users are successfully found, send them back to the client
             res.json(dbUser);
+            
         })
         .catch(function (err) {
             // If an error occurs, send the error back to the client
@@ -134,7 +126,7 @@ app.get("/message", function (req, res) {
 
 app.get("*", (req, res, next) => {
 // res.sendFile(path.join(__dirname, "client/build/index.html"));
-// res.sendFile(path.join(__dirname, "./index.html"));
+res.sendFile(path.join(__dirname, "./public/index.html"));
 });
 
 app.use(
@@ -144,10 +136,6 @@ app.use(
         saveUninitialized: false
     })
 );
-
-    app.use(passport.initialize());
-    app.use(passport.session());
-
     // Start the API server
     app.listen(port, function () {
         console.log(`🌎  ==> API Server now listening on port ${port}!`);

@@ -8,7 +8,9 @@ $(document).ready(function () {
     });
     // end animation the Ryan Drachenberg Image text***************************
 
-    
+    $(".submit").click(function () {
+        window.location.replace = "../../index.html";
+    });
 });
 // end document.ready function***********************************************************************************
 
