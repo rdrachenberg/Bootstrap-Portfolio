@@ -108,9 +108,7 @@ footer {
   background: #3E3F3B;
   border-top: 8px solid grey;
 }
-/* sticky footer styling */
-
-/* http://ryanfait.com/html5-sticky-footer/ */
+/* sticky footer */
 
 html,
 body {
@@ -126,7 +124,8 @@ body {
 
 footer,
 .push {
-  height: 105px;
+  height: 97px;
+  margin-top: 710px;
 }
 
 /* end sticky footer styling */
@@ -265,6 +264,50 @@ input[type=submit] {
   background: gray;
   border: 0 none;
 }
+thanksImgDiv {
+  align-items: center;
+  align-content: center;
+  image-orientation: center;
+  text-align: center;
+  margin-left: 200px;
+}
+
+#thanks-page-api-github-links {
+  text-align: center;
+}
+#thanks-page-api-github-links {
+  text-align: center;
+}
+
+#user-table {
+  font-size: 26px;
+  color: #2fa4e7;
+  text-align: center;
+}
+
+#spacer {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+#git-hub-pages-link {
+  font-size: 26px;
+  color: #2fa4e7;
+  text-align: center;
+}
+.skills-image {
+  max-width: 400px;
+}
+
+#console-gif {
+  width: 320px; 
+  max-width: 320px;
+  float: right;
+  margin-left: 50px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  box-align: center;
+}
 
 @media only screen and (max-width: 992px) {
   
@@ -298,6 +341,7 @@ input[type=submit] {
     border: 1px solid #ddd;
     text-align: center;
   }
+
   .work {
     position: relative;
     align-content: center;
@@ -360,8 +404,8 @@ input[type=submit] {
 }
 
 .main-section {
-   margin-bottom: 15px;
-   padding: 5px;
+  margin-bottom: 15px;
+  padding: 5px;
 }
 
 nav {
@@ -476,21 +520,89 @@ nav {
     margin-right: 30px;
     margin-left: 30px;
   }
-}
-@media only screen and (max-width: 410px) {
-.work {
-  position: relative;
-  align-content: center;
-  width: 295px;
-  margin: 25px 25px 25px;
-  margin-right: 25px;
-  margin-left: 25px;
-  margin-bottom: -5px;
-  overflow: auto;
+
+  #spacer {
+    margin-left: 30px;
+    margin-right: 100px;
+  }
+
+  #user-table {
+    margin-left: 25%;
+  }
+
+  .skills-image {
+    max-width: 320px;
+  }
+
+  #console-gif {
+    width: 400px;
+    max-width: 400px;
+    margin-bottom: 15px;
+    margin-right: 25px;
+    margin-left: 25px;
+  }
 }
 
-.work:nth-child(even) {
-  margin-right: 25px;
-  margin-left: 25px;
+@media only screen and (max-width: 530px) {
+  #console-gif {
+    width: 320px;
+    max-width: 320px;
+  }
 }
+@media only screen and (max-width: 410px) {
+  .work {
+    position: relative;
+    align-content: center;
+    width: 295px;
+    margin: 25px 25px 25px;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: -5px;
+    overflow: auto;
+  }
+
+  .work:nth-child(even) {
+    margin-right: 25px;
+    margin-left: 25px;
+  }  .work {
+    position: relative;
+    align-content: center;
+    width: 295px;
+    margin: 25px 25px 25px;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: -5px;
+    overflow: auto;
+  }
+
+  .work:nth-child(even) {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+
+  #console-gif {
+    width: 300px;
+    max-width: 300px;
+    margin-right: 25px;
+    margin-left: 4px;
+    float: left;
+
+  }
+  .skills-image {
+    max-width: 320px;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  #console-gif {
+    width: 97%;
+    max-width: 100%;
+    margin-right: 0px;
+    margin-left: 3px;
+    float: left;  
+  }
+
+  .skills-image {
+    max-width: 100%;
+  }
 }
