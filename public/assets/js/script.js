@@ -7,9 +7,8 @@ $(document).ready(function () {
         $("#bioPic").stop().animate({ height: "133.25px", width: "200px" });
     });
     // end animation the Ryan Drachenberg Image text***************************
-
-    $(".submit").click(function () {
-        window.location.replace = "../../index.html";
+    $("container-nav").on(function myFunction(x){
+        x.classList.toggle("change");
     });
 });
 // end document.ready function***********************************************************************************
