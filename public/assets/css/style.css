@@ -360,9 +360,9 @@ thanksImgDiv {
     width: 100%;
   }
 
-  #main-container {
-  padding-top: 15px;
-}
+  /* #main-container {
+  padding-top: 5px;
+} */
 
 .main-section {
   float: left;
@@ -434,9 +434,9 @@ thanksImgDiv {
   padding-top: 15px;
 }
 
-#main-container {
-  padding-top: 15px;
-}
+/* #main-container {
+  padding-top: 5px;
+} */
 
 .sidebar {
   margin: 0 auto;
@@ -505,9 +505,9 @@ nav {
     padding-top: 15px;
   }
 
-  #main-container {
-    padding-top: 15px;
-  }
+  /* #main-container {
+    padding-top: 5px;
+  } */
 
   .sidebar {
     margin: 0 auto;
