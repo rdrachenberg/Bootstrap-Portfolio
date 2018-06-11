@@ -178,10 +178,9 @@ footer,
   height: 97px;
   margin-top: 710px;
 }
-
 /* end sticky footer styling */
-/* sidebar */
 
+/* sidebar */
 .sidebar {
   float: right;
   width: 100%;
@@ -194,7 +193,8 @@ footer,
 
 h3,
 .sidebar h2 {
-  padding-bottom: 20px;
+  padding-bottom: 0px;
+  padding-top: 0 px;
   margin-bottom: 15px;
   line-height: 22px;
   border-bottom: 2px solid #eee;
@@ -211,7 +211,12 @@ h3,
 .social:last-child {
   margin-right: 0;
 }
-
+#connect  {
+  padding-bottom: 0px;
+}
+/* #connect-with-me  {
+  padding-top: 20px;
+} */
 /* main */
 
 #main-container {
@@ -346,6 +351,7 @@ thanksImgDiv {
   color: #2fa4e7;
   text-align: center;
 }
+
 .skills-image {
   max-width: 400px;
 }
@@ -358,6 +364,14 @@ thanksImgDiv {
   vertical-align: middle;
   box-sizing: border-box;
   box-align: center;
+}
+
+#got-coin-link {
+  color: #2fa4e7;
+}
+
+#gif-tastic-link {
+  color: #2fa4e7;
 }
 
 @media only screen and (max-width: 992px) {
@@ -386,7 +400,7 @@ thanksImgDiv {
     margin: 0 auto;
     width: 100%;
     max-width: 650px;
-    padding: 20px;
+    padding-top: 20px;
     margin-bottom: 20px;
     background: #fff;
     border: 1px solid #ddd;
@@ -440,14 +454,10 @@ thanksImgDiv {
   padding-top: 15px;
 }
 
-/* #main-container {
-  padding-top: 5px;
-} */
-
 .sidebar {
   margin: 0 auto;
   width: 100%;
-  padding: 0px;
+  padding-top: 20px;
   margin-bottom: 0px;
   background: #fff;
   border: 1px solid #ddd;
@@ -511,14 +521,10 @@ nav {
     padding-top: 15px;
   }
 
-  /* #main-container {
-    padding-top: 5px;
-  } */
-
   .sidebar {
     margin: 0 auto;
     width: 100%;
-    padding: 0px;
+    padding-top: 20px;
     margin-bottom: 0px;
     background: #fff;
     border: 1px solid #ddd;
@@ -615,21 +621,7 @@ nav {
   .work:nth-child(even) {
     margin-right: 25px;
     margin-left: 25px;
-  }  .work {
-    position: relative;
-    align-content: center;
-    width: 295px;
-    margin: 25px 25px 25px;
-    margin-right: 25px;
-    margin-left: 25px;
-    margin-bottom: -5px;
-    overflow: auto;
-  }
-
-  .work:nth-child(even) {
-    margin-right: 25px;
-    margin-left: 25px;
-  }
+  } 
 
   #console-gif {
     width: 300px;
@@ -647,9 +639,26 @@ nav {
   }
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 380px) {
   #bioPic{
-    width: 97%;
+    width: 50%;
+  }
+
+  .work {
+    position: relative;
+    align-content: center;
+    width: 88%;
+    max-width: 270px;
+    margin: 25px 25px 25px;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: -5px;
+    overflow: auto;
+  }
+
+  .work:nth-child(even) {
+    margin-right: 25px;
+    margin-left: 25px;
   }
 }
 
